@@ -87,7 +87,7 @@ h2
 .container
 {
     clear:both;
-    overflow:auto;
+    /* overflow:auto; */
 }
 nav{float:right;}
 .logo img{ float:left;}
@@ -285,3 +285,29 @@ li:hover{ font-weight:bold;}
         .s-move:hover { animation-play-state: paused; }
         /* Navigation Bounce Animation  Start*/
 /* Navigation Bounce Animation  Ended*/
+
+.left {
+    
+    /* display: inline-block;
+    
+    top: 30px;
+    left: 50px; */
+    float: left;
+  }
+  .left img {
+    /* padding-top: 12px;
+    width: 112px; */
+    border-radius: 200px; 
+
+    max-width: 80px;
+  float: left;
+  margin: 0px 65px 0 0;
+  }
+  
+  
+  
+  h3 {
+    font-size: 1.5em;
+    margin: .7em 0 .3em 0;
+    display: inline-block;
+  }
