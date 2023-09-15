@@ -1,0 +1,19 @@
+/* Add your CSS styles here to format the library's appearance */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.resource {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+}
+
+.resource a {
+    text-decoration: none;
+    color: #007BFF;
+}
