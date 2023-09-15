@@ -13,37 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
         <link rel="shortcut icon"   href="Images/favicon.png"> 
         <link rel="manifest" href="/site.webmanifest">
-        <script src="main.js" type="text/javascript"></script>
-        <script>
-            // DOM ready
-            $(function() {
-                
-                // Create the dropdown base
-                $("<select />").appendTo("nav");
-                
-                // Create default option "Go to..."
-                $("<option />", {
-                        "selected": "selected",
-                        "value"   : "",
-                        "text"    : "About Us"
-                    }).appendTo("nav select");
-                
-                // Populate dropdown with menu items
-                $("nav a").each(function() {
-                        var el = $(this);
-                        $("<option />", {
-                            "value"   : el.attr("href"),
-                            "text"    : el.text()
-                        }).appendTo("nav select");
-                    });
-                
-                    // To make dropdown actually work
-                $("nav select").change(function() {
-                    window.location = $(this).find("option:selected").val();
-                    });
-                
-                });
-        </script>
+        <script src="aboutus.js" type="text/javascript"></script>
+       
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -114,10 +85,7 @@
             
         </div>
             <br><br><br>
-        <div class="footer-basic">
-            <footer>
-                <p>Co-Created By: Parth Sharma / Aditya Mohan Nambiar / Naghul K K</p>
-            </footer>
+
 
 
 
