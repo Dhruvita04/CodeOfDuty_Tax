@@ -2,118 +2,70 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Income Tax Department of India</title>
-        <link rel="stylesheet" href="main.css">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lexend&family=Raleway:wght@100;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
-        <link rel="shortcut icon"   href="Images/favicon.png"> 
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="stylesheet" href="searchbar.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&family=Bebas+Neue&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-
-	    <script src="main.js" type="text/javascript"></script>
-  
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+                
+        <title>Budgety</title>
+    </head>
     <body>
         
-        <!-- Navigation Bar -->
-        <div class="container">
-            <div class="left">
-                <a href="index.html"><img src="images/finallogo.png" alt="no img" />
+        <div class="top">
+            <div class="budget">
+                <div class="budget__title">
+                    Available Budget in <span class="budget__title--month"></span>
+                </div>
                 
-                </a>
+                <div class="budget__value"></div>
                 
-            </div>
-            
-            
-            <div class="container">
-                <nav class="navbar">
-                    
-                    <ul class="nav-links">
-                        <li class="nav-link">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="nav-link services">
-                            <a href="#">Tax-Calculator
-                                <span class="material-icons dropdown-icon">
-                                    arrow_drop_down
-                                </span>
-                            </a>
-                            <ul class="drop-down">
-                                <li><a href="GSTcalc.html">GST Calculator</a></li>
-                                <li><a href="tax.html">Tax Calculator</a></li>
-                                <li><a href="gratuity.html">Gratuity</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-link services">
-                            <a href="#">Interactive Tools
-                                <span class="material-icons dropdown-icon">
-                                    arrow_drop_down
-                                </span>
-                            </a>
-                            <ul class="drop-down">
-                                <li><a href="">ITR Eligibility</a></li>
-                                <li><a href="">SIP Calculator</a></li>
-                                <li><a href="">Offline ITR</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-                <div class="right">
-                    <!-- <button class="btn">Call Us</button> -->
-                    <button class="btn"><a href="#">About Us</a> </button>
-                  </div>
-            
-                
-            </div>
-        <!-- Navigation Bar Ended-->
-        <br>
-
-        <div class="main">
-        <!-- News Pannel -->
-
-            <div class="news">
-                <div class="s-wrap"><div class="s-move">
-                    <div class="slide">
-                        <p class="text3">
-                            UDIN for Audit Forms / Audit certificates can be updated till 30th April, 2021.
-                        </p>
-                    </div>                    <div class="slide">
-                        <p class="text3">
-                            Last date for linking PAN with Aadhaar is 30th June, 2021. 
-                        </p>
-                    </div>                    <div class="slide">
-                        <p class="text3">
-                            Dear User, we are working on the FVU related changes. Kindly wait for some time. Once deployed suitable notice would be posted on the portal.
-                        </p>
-                    </div>                    <div class="slide">
-                        <p class="text3">
-                            An updated version of form 64D as per notification no. 55/2020 is now available for filing.
-                        </p>
-                    </div>                    <div class="slide">
-                        <p class="text3">
-                            Form 10G, 56, 3CF-I, 3CF-II and 3CF-III ceased to be effective on or after the 1st day of April, 2021.
-                        </p>
+                <div class="budget__income clearfix">
+                    <div class="budget__income--text">Income</div>
+                    <div class="right">
+                        <div class="budget__income--value"></div>
+                        <div class="budget__income--percentage">&nbsp;</div>
                     </div>
-                  </div></div>          
-            
+                </div>
+                
+                <div class="budget__expenses clearfix">
+                    <div class="budget__expenses--text">Expenses</div>
+                    <div class="right clearfix">
+                        <div class="budget__expenses--value"></div>
+                        <div class="budget__expenses--percentage"></div>
+                    </div>
+                </div>
             </div>
+        </div>
 
-        <!-- News Pannel Ended-->
+        <div class="bottom">
+            <div class="add">
+                <div class="add__container">
+                    <select class="add__type">
+                        <option value="inc" selected>+</option>
+                        <option value="exp">-</option>
+                    </select>
+                    <input type="text" class="add__description" placeholder="Add description">
+                    <input type="number" class="add__value" placeholder="Value">
+                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                </div>
+            </div>
+            
+            <div class="container clearfix">
 
+                <div class="income">
+                    <h2 class="icome__title">Income</h2>
+                    <div class="income__list"></div>
+                </div>
 
-        
+                <div class="expenses">
+                    <h2 class="expenses__title">Expenses</h2>
+                    <div class="expenses__list"></div>
+                </div>
+            </div>
+        </div>
+
+    <script src="js/budgetController.js"></script>
+    <script src="js/UIController.js"></script>
+    <script src="js/appController.js"></script>
     </body>
+    
 </html>
